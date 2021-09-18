@@ -10,15 +10,9 @@
         "name": "Discord"
     },
     {
-        "href": "https://wiki.minestom.net/",
+        "href": "https://wiki.kryptonmc.org/",
         "icon": "fas fa-book",
         "name": "Wiki",
         "style":{"fontSize": "24px"}
-    },
-    {
-        "href": "https://javadoc.minestom.net/",
-        "icon": "fab fa-java",
-        "name": "Javadoc",
-        "style": {"fontWeight": "bold"}
     }
 ]

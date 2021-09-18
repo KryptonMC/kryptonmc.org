@@ -1,6 +1,6 @@
 @import '../components/colors';
 @import "../components/breakpoints";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
 
 :root {
     overflow-x: hidden;
@@ -10,12 +10,12 @@ body {
     color: whitesmoke;
     margin: 0;
     background-color: $gray;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 a:any-link {
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather Sans Light', sans-serif;
     color: whitesmoke;
 }
 

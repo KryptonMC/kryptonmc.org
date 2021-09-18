@@ -1,18 +1,22 @@
 [
   {
     "href": "/",
+    "icon": "fas fa-home",
     "name": "Home"
   },
   {
-    "href": "/extensions",
-    "name": "Extensions"
+    "href": "https://github.com/KryptonMC/Krypton",
+    "icon": "fab fa-github",
+    "name": "GitHub"
   },
   {
-    "href": "/libraries",
-    "name": "Libraries"
+    "href": "/discord",
+    "icon": "fab fa-discord",
+    "name": "Discord"
   },
   {
-    "href": "/implementations",
-    "name": "Implementations"
+    "href": "https://wiki.kryptonmc.org/",
+    "icon": "fas fa-book",
+    "name": "Wiki"
   }
 ]

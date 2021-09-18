@@ -14,21 +14,22 @@ export default class index extends Component {
             <div>
                 <GeneralHeader />
                 <Helmet>
-                    <title>Minestom: Fast and open source Minecraft server</title>
-                    <meta name="description" content="A multithreaded, open-source library for developing high-performance Minecraft servers." />
-                    <link rel="canonical" href="https://minestom.net/" />
-                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/androidstudio.css" />
+                    <title>Krypton - a Minecraft server written from scratch</title>
+                    <meta name="description" content="A fast, lightweight Minecraft server, written from scratch in Kotlin" />
+                    <link rel="canonical" href="https://kryptonmc.org/" />
                 </Helmet>
                 <div style={{display: "flex", flexFlow: "column", height: "100vh"}}>
                     <Navbar />
                     <div style={{overflow: "auto"}}>
                         <div className="header">
                             <span>
-                                <h1>Minestom</h1>
-                                <h2>A Minecraft server implementation,<br/> open-source and without any code from Mojang.</h2>
+                                <h1>Krypton</h1>
+                                <h2>A Minecraft server, written from scratch in Kotlin</h2>
                             </span>
                         </div>
-                        {Sections.map(section => (<GenericSection key={section.title} {...section} />))}
+                        <div className="footer">
+                            <h1>Ⓒ 2021 KryptonMC & Minestom. All rights reserved.</h1>
+                        </div>
                     </div>
                 </div>
             </div>

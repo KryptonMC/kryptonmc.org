@@ -4,7 +4,7 @@
 .header {
     width: 100%;
     height: calc(100vh - 45px);
-    background: linear-gradient(135deg, $orange, $pink);
+    background: linear-gradient(135deg, $light-purple, $dark-purple);
     box-shadow: 0 4px 4px 0 rgba(0,0,0,.2);
     align-items: center;
     display: flex;
@@ -46,5 +46,16 @@
         @media screen and (max-width: 600px) {
             font-size: 4vw;
         }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+
+    h1 {
+        font-size: 14px;
+        font-family: 'Merriweather Sans Light', sans-serif;
     }
 }

@@ -2,7 +2,7 @@
 @import "breakpoints";
 @import "common";
 
-$navbar-height: 45px;
+$navbar-height: 60px;
 
 .navbar {
     height: $navbar-height;
@@ -28,39 +28,51 @@ $navbar-height: 45px;
         }
     }
 
+    img {
+        padding: 10px 0 10px 10px;
+    }
+    @media (max-width: $small) {
+        img:hover {
+            background-color: $dark_gray;
+        }
+    }
+
     span {
         display: flex;
-        margin-left: 0;
+        margin-left: calc(100% / 6.4);
         margin-right: auto;
 
-        @media (max-width: $small) {
-            .toggle-container {
-                &.on {
-                    display: block;
-                    position: absolute;
-                    top: $navbar-height;
-                    background-color: $black;
+        .toggle-container {
+            &.on {
+                display: block;
+                position: absolute;
+                top: $navbar-height;
+                background-color: $black;
+                margin-left: 0;
+                padding: 5px 5px 5px 5px;
+                width: 200px;
 
-                    a {
-                        font-size: unset !important;
-                    }
+                a {
+                    font-size: unset !important;
                 }
+            }
 
-                &.off {
-                    display: none;
-                }
+            &.off {
+                display: none;
             }
         }
 
         > i {
-            display: none;
-
-            @media (max-width: $small) {
-                display: block;
-                padding: 5px 10px;
-                font-size: 28px;
-                align-self: center;
-            }
+            display: block;
+            font-size: 24px;
+            align-self: center;
         }
     }
+}
+
+.navbar-right {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    padding-right: calc(100% / 6.4);
 }

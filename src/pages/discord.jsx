@@ -12,7 +12,7 @@ export default class discord extends Component {
                     <meta http-equiv="refresh" content="0; URL=https://discord.gg/rV24CzG" />
                 </Helmet>
                 <GeneralHeader />
-                <a href="https://discord.gg/rV24CzG">If you don't get redirected, use this link.</a>
+                <a href="https://discord.gg/4QuwYACDRX">If you don't get redirected, use this link.</a>
             </div>
         )
     }
