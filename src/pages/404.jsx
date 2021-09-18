@@ -12,7 +12,7 @@ export default class index extends Component {
             <div>
                 <GeneralHeader />
                 <Helmet>
-                    <title>404 Page not found | Minestom</title>
+                    <title>404 Page not found | Krypton</title>
                 </Helmet>
                 <div style={{display: "flex", flexFlow: "column", height: "100vh"}}>
                     <Navbar />

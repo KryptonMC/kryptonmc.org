@@ -7,8 +7,8 @@ export default class GeneralHeader extends Component {
             <Helmet htmlAttributes={{lang: "en"}}>
                 <meta name="theme-color" content="#2A3030" />
                 <link href="/favicon.ico" rel="icon" />
-                <script async src="https://kit.fontawesome.com/7f109a5094.js" crossorigin="anonymous" />
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-BREZVMFMW6" />
+                <script async src="https://kit.fontawesome.com/2db51182d1.js" crossorigin="anonymous" />
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-694DME689X" />
                 <script async src="/static/js/gtag.js" />
             </Helmet>
         )

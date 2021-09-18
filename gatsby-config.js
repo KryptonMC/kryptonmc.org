@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://minestom.net",
-    title: "Minestom",
+    siteUrl: "https://kryptonmc.org",
+    title: "Krypton",
   },
   plugins: [
     {
@@ -27,8 +27,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://minestom.net',
-        sitemap: 'https://minestom.net/sitemap.xml',
+        host: 'https://kryptonmc.org',
+        sitemap: 'https://kryptonmc.org/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },

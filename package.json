@@ -1,15 +1,15 @@
 {
-  "name": "minestom.net",
+  "name": "kryptonmc.org",
   "version": "1.0.0",
-  "description": "Website of the Minestom project",
+  "description": "The official Krypton website",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Minestom/minestom.net.git"
+    "url": "git+https://github.com/KryptonMC/kryptonmc.org.git"
   },
   "bugs": {
-    "url": "https://github.com/Minestom/minestom.net/issues"
+    "url": "https://github.com/KryptonMC/kryptonmc.org/issues"
   },
-  "homepage": "https://minestom.net",
+  "homepage": "https://kryptonmc.org",
   "private": true,
   "scripts": {
     "develop": "gatsby develop",

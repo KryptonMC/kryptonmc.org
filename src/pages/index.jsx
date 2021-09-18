@@ -28,7 +28,7 @@ export default class index extends Component {
                             </span>
                         </div>
                         <div className="footer">
-                            <h1>Ⓒ 2021 KryptonMC & Minestom. All rights reserved.</h1>
+                            <h1>Ⓒ 2021 KryptonMC & <a href="https://minestom.net">Minestom</a>. All rights reserved.</h1>
                         </div>
                     </div>
                 </div>
