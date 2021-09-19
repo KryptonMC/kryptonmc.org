@@ -3,7 +3,6 @@ import NavbarLink from './NavbarLink'
 import './Navbar.scss';
 import ExternalLinks from '../resources/external-links.json'
 import InternalLinks from '../resources/internal-links.json'
-import KryptonLogo from '../resources/img/banner.png'
 import KryptonBanner from '../resources/img/banner.png'
 
 export default class Navbar extends Component {
@@ -11,36 +10,52 @@ export default class Navbar extends Component {
         super(props);
         this.toggle = this.toggle.bind(this)
         this.state = {
-            toggled: false
+            toggled: false,
+            width: 0
         }
     }
 
     render() {
-        const width = typeof window === "undefined" ? 0 : window.innerWidth;
-        const isSmall = width <= 650;
         return (
             <div className="navbar">
                 <span>
                     <img
-                        src={isSmall ? KryptonLogo : KryptonBanner}
+                        src={KryptonBanner}
                         alt="Krypton"
-                        width={isSmall ? "40px" : "200px"}
+                        width="200px"
                         height="40px"
-                        onClick={isSmall && this.toggle}
+                        onClick={this.state.width <= 650 && this.toggle}
                     />
-                    {isSmall && <i className="fas fa-caret-down" onClick={this.toggle} />}
-                    {isSmall && <span className={`toggle-container ${this.state.toggled ? "on" : "off"}`}>
+                    {this.state.width <= 650 && <i className="fas fa-caret-down" onClick={this.toggle} />}
+                    {this.state.width <= 650 && <span className={`toggle-container ${this.state.toggled ? "on" : "off"}`}>
                         {InternalLinks.map(link => (<NavbarLink {...link} />))}
                     </span>}
                 </span>
-                {isSmall && <div className="navbar-right">
+                {this.state.width > 650 && <div className="navbar-right">
                     {ExternalLinks.map(link => (<NavbarLink {...link} />))}
                 </div>}
             </div>
         )
     }
 
+    componentDidMount() {
+        this.updateDimensions()
+        window.addEventListener('resize', this.updateDimensions)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions)
+    }
+
+    updateDimensions() {
+        this.setState({ width: document.body.scrollWidth })
+    }
+
     toggle() {
         this.setState({toggled: !this.state.toggled})
+    }
+
+    isSmall() {
+        return this.state.width <= 650
     }
 }
