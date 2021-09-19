@@ -27,6 +27,7 @@ export default class index extends Component {
                                 <h2>A Minecraft server, written from scratch in Kotlin</h2>
                             </span>
                         </div>
+                        {Sections.map(section => (<GenericSection key={section.title} {...section} />))}
                         <div className="footer">
                             <h1>Ⓒ 2021 KryptonMC & <a href="https://minestom.net">Minestom</a>. All rights reserved.</h1>
                         </div>
