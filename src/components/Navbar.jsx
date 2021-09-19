@@ -17,22 +17,23 @@ export default class Navbar extends Component {
 
     render() {
         const width = typeof window === "undefined" ? 0 : window.innerWidth;
+        const isSmall = width <= 650;
         return (
             <div className="navbar">
                 <span>
                     <img
-                        src={width <= 650 ? KryptonLogo : KryptonBanner}
+                        src={isSmall ? KryptonLogo : KryptonBanner}
                         alt="Krypton"
-                        width="200px"
+                        width={isSmall ? "40px" : "200px"}
                         height="40px"
-                        onClick={width <= 650 && this.toggle}
+                        onClick={isSmall && this.toggle}
                     />
-                    {width <= 650 && <i className="fas fa-caret-down" onClick={this.toggle} />}
-                    {width <= 650 && <span className={`toggle-container ${this.state.toggled ? "on" : "off"}`}>
+                    {isSmall && <i className="fas fa-caret-down" onClick={this.toggle} />}
+                    {isSmall && <span className={`toggle-container ${this.state.toggled ? "on" : "off"}`}>
                         {InternalLinks.map(link => (<NavbarLink {...link} />))}
                     </span>}
                 </span>
-                {width > 650 && <div className="navbar-right">
+                {isSmall && <div className="navbar-right">
                     {ExternalLinks.map(link => (<NavbarLink {...link} />))}
                 </div>}
             </div>
