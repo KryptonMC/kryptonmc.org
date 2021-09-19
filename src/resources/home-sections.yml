@@ -57,3 +57,10 @@
                 server.getPlatform().getVersion());
         }
     }
+- title: "Where do I start?"
+  paragraphs:
+    - It depends on what you want to do. Everything should be comprehensibly documented on the wiki,
+      which is linked at the top of this page, and for any questions that aren't answered by the wiki,
+      the Discord is the place to go, which is also linked at the top of the page.
+    - Thank you for even considering using Krypton, support from people like you is what keeps this
+      project alive.

@@ -8,13 +8,16 @@ import { CodeBlock, atomOneDark } from 'react-code-blocks'
 export default class GenericSection extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            width: 0
+        }
         // this.codeBlock = React.createRef()
     }
 
     render() {
         return (
             <div className="generic-section">
-                <div>
+                {this.props.code !== undefined && <div>
                     <pre>
                         {this.props.codeUrl !== undefined && <a href={this.props.codeUrl} rel={"nofollow"}><i className="fas fa-link"/></a>}
                         <CodeBlock
@@ -29,9 +32,13 @@ export default class GenericSection extends Component {
                             }}
                         />
                     </pre>
-                </div>
+                </div>}
                 <div>
-                    <div>
+                    <div style={{
+                        width: this.props.code === undefined ? "70%" : "600px",
+                        paddingLeft: this.props.code === undefined ? this.state.width / 6.4 + "px" : "0px",
+                        paddingRight: this.props.code === undefined ? this.state.width / 6.4 + "px" : "0px",
+                    }}>
                         <h3>{this.props.title}</h3>
                         {this.props.paragraphs.map(p => (<p key={p.substr(0,30)} dangerouslySetInnerHTML={{__html: p}}/>))}
                         {this.props.info !== undefined && <Info text={this.props.info} />}
@@ -42,5 +49,22 @@ export default class GenericSection extends Component {
                 </div>
             </div>
         )
+    }
+
+    componentDidMount() {
+        this.updateDimensions()
+        window.addEventListener('resize', this.updateDimensions.bind(this))
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions.bind(this))
+    }
+
+    updateDimensions() {
+        this.setState({ width: document.body.scrollWidth })
+    }
+
+    isSmall() {
+        return this.state.width <= 650
     }
 }
