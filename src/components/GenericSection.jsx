@@ -4,6 +4,7 @@ import WikiReference from './WikiReference'
 import { Info, Warn, Error } from './Callout'
 import hljs from "highlight.js";
 import { CodeBlock, atomOneDark } from 'react-code-blocks'
+import { DeviceSizes } from "./breakpoints";
 
 export default class GenericSection extends Component {
     constructor(props) {
@@ -35,7 +36,7 @@ export default class GenericSection extends Component {
                 </div>}
                 <div>
                     <div style={{
-                        width: this.props.code === undefined ? "70%" : "600px",
+                        width: this.size,
                         paddingLeft: this.props.code === undefined ? this.state.width / 6.4 + "px" : "0px",
                         paddingRight: this.props.code === undefined ? this.state.width / 6.4 + "px" : "0px",
                     }}>
@@ -64,7 +65,8 @@ export default class GenericSection extends Component {
         this.setState({ width: document.body.scrollWidth })
     }
 
-    isSmall() {
-        return this.state.width <= 650
+    get size() {
+        if (this.state.width <= DeviceSizes.MEDIUM) return "100%";
+        return this.props.code === undefined ? "70%" : "600px";
     }
 }

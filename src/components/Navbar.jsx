@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import NavbarLink from './NavbarLink'
 import './Navbar.scss';
+import { DeviceSizes } from "./breakpoints";
 import ExternalLinks from '../resources/external-links.json'
 import InternalLinks from '../resources/internal-links.json'
 import KryptonBanner from '../resources/img/banner.png'
@@ -24,14 +25,14 @@ export default class Navbar extends Component {
                         alt="Krypton"
                         width="200px"
                         height="40px"
-                        onClick={this.state.width <= 650 && this.toggle}
+                        onClick={this.isSmall() && this.toggle}
                     />
-                    {this.state.width <= 650 && <i className="fas fa-caret-down" onClick={this.toggle} />}
-                    {this.state.width <= 650 && <span className={`toggle-container ${this.state.toggled ? "on" : "off"}`}>
+                    {this.isSmall() && <i className="fas fa-caret-down" onClick={this.toggle} />}
+                    {this.isSmall() && <span className={`toggle-container ${this.state.toggled ? "on" : "off"}`}>
                         {InternalLinks.map(link => (<NavbarLink {...link} />))}
                     </span>}
                 </span>
-                {this.state.width > 650 && <div className="navbar-right">
+                {this.isSmall() && <div className="navbar-right">
                     {ExternalLinks.map(link => (<NavbarLink {...link} />))}
                 </div>}
             </div>
@@ -56,6 +57,6 @@ export default class Navbar extends Component {
     }
 
     isSmall() {
-        return this.state.width <= 650
+        return this.state.width <= DeviceSizes.SMALL
     }
 }
