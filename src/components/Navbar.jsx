@@ -32,7 +32,7 @@ export default class Navbar extends Component {
                         {InternalLinks.map(link => (<NavbarLink {...link} />))}
                     </span>}
                 </span>
-                {this.isSmall() && <div className="navbar-right">
+                {!this.isSmall() && <div className="navbar-right">
                     {ExternalLinks.map(link => (<NavbarLink {...link} />))}
                 </div>}
             </div>
