@@ -33,11 +33,13 @@
                 }
             }
 
+            /* Causes the sections without code to also get hidden
             @media (max-width: $small) {
                 & {
                     display: none;
                 }
             }
+            */
         }
 
         > div:last-of-type > div {
@@ -93,5 +95,11 @@
                 border-radius: 5px;
             }
         }
+    }
+}
+
+@media (max-width: $small) {
+    .code-section {
+        display: none;
     }
 }

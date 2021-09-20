@@ -18,7 +18,7 @@ export default class GenericSection extends Component {
     render() {
         return (
             <div className="generic-section">
-                {this.props.code !== undefined && <div>
+                {this.props.code !== undefined && <div className="code-section">
                     <pre>
                         {this.props.codeUrl !== undefined && <a href={this.props.codeUrl} rel={"nofollow"}><i className="fas fa-link"/></a>}
                         <CodeBlock
@@ -37,8 +37,8 @@ export default class GenericSection extends Component {
                 <div>
                     <div style={{
                         width: this.size,
-                        paddingLeft: this.props.code === undefined ? this.state.width / 6.4 + "px" : "0px",
-                        paddingRight: this.props.code === undefined ? this.state.width / 6.4 + "px" : "0px",
+                        paddingLeft: this.padding,
+                        paddingRight: this.padding,
                     }}>
                         <h3>{this.props.title}</h3>
                         {this.props.paragraphs.map(p => (<p key={p.substr(0,30)} dangerouslySetInnerHTML={{__html: p}}/>))}
@@ -68,5 +68,10 @@ export default class GenericSection extends Component {
     get size() {
         if (this.state.width <= DeviceSizes.MEDIUM) return "100%";
         return this.props.code === undefined ? "70%" : "600px";
+    }
+
+    get padding() {
+        if (this.state.width <= DeviceSizes.MEDIUM) return "0px";
+        return this.props.code === undefined ? this.state.width / 6.4 + "px" : "0px";
     }
 }
