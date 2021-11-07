@@ -16,7 +16,8 @@
         "start": "gatsby develop",
         "build": "gatsby build",
         "serve": "gatsby serve",
-        "clean": "gatsby clean"
+        "clean": "gatsby clean",
+        "nice": "npx prettier --write ."
     },
     "dependencies": {
         "@mdx-js/mdx": "^1.6.22",
