@@ -22,7 +22,6 @@ a:any-link {
 .only-small {
   @media (min-width: $medium) {
     display: none;
-    padding: 15px;
   }
 }
 
