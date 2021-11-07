@@ -1,43 +1,44 @@
 @import '../components/colors';
-@import "../components/breakpoints";
+@import '../components/breakpoints';
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
 
 :root {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
-    color: whitesmoke;
-    margin: 0;
-    background-color: $gray;
-    font-family: 'Merriweather Sans', sans-serif;
+  color: whitesmoke;
+  margin: 0;
+  background-color: $gray;
+  font-family: 'Merriweather Sans', sans-serif;
+  padding: 10px;
 }
 
 a:any-link {
-    text-decoration: none;
-    font-family: 'Merriweather Sans Light', sans-serif;
-    color: whitesmoke;
+  text-decoration: none;
+  font-family: 'Merriweather Sans Light', sans-serif;
+  color: whitesmoke;
 }
 
 .only-small {
-    @media (min-width: $medium) {
-        display: none;
-    }
+  @media (min-width: $medium) {
+    display: none;
+  }
 }
 
 ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+  width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: $black;
+  background-color: $black;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: $orange;
+  background-color: $orange;
 
-    &:hover {
-        background-color: rgba($orange, .75);
-    }
+  &:hover {
+    background-color: rgba($orange, 0.75);
+  }
 }
