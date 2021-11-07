@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import GeneralHeader from './GeneralHeader'
-import Navbar from './Navbar'
+import React, { Component } from 'react';
+import GeneralHeader from './GeneralHeader';
+import Navbar from './Navbar';
 
 export default class ServerLayout extends Component {
     render() {
@@ -11,6 +11,6 @@ export default class ServerLayout extends Component {
                 <h3>Test layout</h3>
                 {console.log(this)}
             </div>
-        )
+        );
     }
 }

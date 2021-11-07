@@ -1,26 +1,30 @@
-import React, {Component} from 'react';
-import Fuse from "fuse.js";
-import './Search.scss'
+import React, { Component } from 'react';
+import Fuse from 'fuse.js';
+import './Search.scss';
 
 class Search extends Component {
     constructor(props) {
         super(props);
-        this.handleInput = this.handleInput.bind(this)
+        this.handleInput = this.handleInput.bind(this);
 
-        this.fuse = null
+        this.fuse = null;
         if (this.props.state[this.props.data] !== undefined) {
             this.fuse = new Fuse(this.props.state[this.props.data], {
                 keys: this.props.keys,
-                threshold: .25
-            })
+                threshold: 0.25
+            });
         }
     }
 
     render() {
         return (
-            <div className={"search"}>
-                <i className="fas fa-search"/>
-                <input type={"text"} placeholder={"Search"} onInput={this.handleInput}/>
+            <div className={'search'}>
+                <i className="fas fa-search" />
+                <input
+                    type={'text'}
+                    placeholder={'Search'}
+                    onInput={this.handleInput}
+                />
             </div>
         );
     }
@@ -28,24 +32,27 @@ class Search extends Component {
     handleInput(event) {
         const value = event.target.value;
 
-        if (this.fuse === null && this.props.state[this.props.data] !== undefined) {
+        if (
+            this.fuse === null &&
+            this.props.state[this.props.data] !== undefined
+        ) {
             this.fuse = new Fuse(this.props.state[this.props.data], {
                 keys: this.props.keys,
-                threshold: .25
-            })
+                threshold: 0.25
+            });
         }
 
-        if(value.length === 0 || this.fuse === null) {
+        if (value.length === 0 || this.fuse === null) {
             this.props.onResult({
                 useResults: false
-            })
-            return
+            });
+            return;
         }
 
         this.props.onResult({
             useResults: true,
-            results: this.fuse.search(value).map(x => x.item)
-        })
+            results: this.fuse.search(value).map((x) => x.item)
+        });
     }
 }
 

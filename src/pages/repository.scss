@@ -1,32 +1,32 @@
 th {
-  padding-top: 15px;
-  text-align: left;
-  font-size: x-large;
+    padding-top: 15px;
+    text-align: left;
+    font-size: x-large;
 }
 
 td {
-  &:first-of-type {
-    font-weight: bold;
-  }
+    &:first-of-type {
+        font-weight: bold;
+    }
 
-  a > i {
-    font-size: 85%;
-    vertical-align: middle;
-    margin-left: 5px;
-  }
+    a > i {
+        font-size: 85%;
+        vertical-align: middle;
+        margin-left: 5px;
+    }
 }
 
 .sub-table {
-  font-weight: initial;
-  width: 100%;
+    font-weight: initial;
+    width: 100%;
 }
 
 #readme {
-  img {
-    max-width: 100%;
-  }
+    img {
+        max-width: 100%;
+    }
 
-  > span > :last-child {
-    padding-bottom: 10vh;
-  }
+    > span > :last-child {
+        padding-bottom: 10vh;
+    }
 }

@@ -1,22 +1,22 @@
 [
-  {
-    "href": "/",
-    "icon": "fas fa-home",
-    "name": "Home"
-  },
-  {
-    "href": "https://github.com/KryptonMC/Krypton",
-    "icon": "fab fa-github",
-    "name": "GitHub"
-  },
-  {
-    "href": "/discord",
-    "icon": "fab fa-discord",
-    "name": "Discord"
-  },
-  {
-    "href": "https://wiki.kryptonmc.org/",
-    "icon": "fas fa-book",
-    "name": "Wiki"
-  }
+    {
+        "href": "/",
+        "icon": "fas fa-home",
+        "name": "Home"
+    },
+    {
+        "href": "https://github.com/KryptonMC/Krypton",
+        "icon": "fab fa-github",
+        "name": "GitHub"
+    },
+    {
+        "href": "/discord",
+        "icon": "fab fa-discord",
+        "name": "Discord"
+    },
+    {
+        "href": "https://wiki.kryptonmc.org/",
+        "icon": "fas fa-book",
+        "name": "Wiki"
+    }
 ]

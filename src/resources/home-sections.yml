@@ -1,66 +1,67 @@
 ---
 - title: Introduction
   paragraphs:
-    - "Krypton is Minecraft server software, just like Paper or Sponge, but unlike both
-      of those, it's written entirely from scratch, meaning it doesn't depend on any
-      Mojang code."
-    - "Krypton's API is relatively new, but very powerful, and is designed around three
-      things: simplicity, extensibility, and ease of implementation. It is unlikely it
-      will achieve all three simultaneously, but hey, we try."
-    - "In addition, Krypton is written in Kotlin, not Java, which means you can take
-      advantage of features such as coroutines, reified generics, and much more features
-      that Kotlin has. Though, if Kotlin isn't your cup of tea, then the API is designed
-      with both Kotlin and Java in mind, so your Java plugins will still work fine."
-  warn: "Krypton is still in fairly early development, so go easy on us please :)"
-  error: "Replacing Bukkit or Sponge with Krypton <strong>will not work</strong> because
-    we do not support their APIs."
+      - "Krypton is Minecraft server software, just like Paper or Sponge, but unlike both
+        of those, it's written entirely from scratch, meaning it doesn't depend on any
+        Mojang code."
+      - "Krypton's API is relatively new, but very powerful, and is designed around three
+        things: simplicity, extensibility, and ease of implementation. It is unlikely it
+        will achieve all three simultaneously, but hey, we try."
+      - "In addition, Krypton is written in Kotlin, not Java, which means you can take
+        advantage of features such as coroutines, reified generics, and much more features
+        that Kotlin has. Though, if Kotlin isn't your cup of tea, then the API is designed
+        with both Kotlin and Java in mind, so your Java plugins will still work fine."
+  warn: 'Krypton is still in fairly early development, so go easy on us please :)'
+  error:
+      'Replacing Bukkit or Sponge with Krypton <strong>will not work</strong> because
+      we do not support their APIs.'
   codeUrl: https://github.com/Minestom/Minestom/blob/d53ef3658665377298276fe16bd558daf1458940/src/test/java/demo/MainDemo.java#L19-L39
   code: |
-    @Plugin(id = "my-plugin")
-    class MyPlugin @Inject constructor(
-        val server: Server,
-        val logger: Logger
-    ) {
+      @Plugin(id = "my-plugin")
+      class MyPlugin @Inject constructor(
+          val server: Server,
+          val logger: Logger
+      ) {
 
-        @Listener
-        fun onStart(event: ServerStartEvent) {
-            logger.info("Hello from my plugin! Running on ${server.platform.name} version ${server.platform.version}!")
-        }
-    }
-- title: "Why Krypton?"
+          @Listener
+          fun onStart(event: ServerStartEvent) {
+              logger.info("Hello from my plugin! Running on ${server.platform.name} version ${server.platform.version}!")
+          }
+      }
+- title: 'Why Krypton?'
   paragraphs:
-    - Krypton is mostly just worked on out of enjoyment, there are no real goals at the moment
-      in terms of the problems that need to be solved with vanilla. The only goals that exist
-      at the moment are 1 to 1 parity with vanilla features and, if possible, better performance
-      than the vanilla server.
-    - "If you're looking for stability, high performance, or a fully implemented Minecraft server
-      supporting all of the vanilla features, then this project probably isn't for you. However,
-      if you'd like to experiment with something new, and want to find out more about how this
-      sort of thing even works, then you may have found the right place."
-  codeLanguage: "java"
+      - Krypton is mostly just worked on out of enjoyment, there are no real goals at the moment
+        in terms of the problems that need to be solved with vanilla. The only goals that exist
+        at the moment are 1 to 1 parity with vanilla features and, if possible, better performance
+        than the vanilla server.
+      - "If you're looking for stability, high performance, or a fully implemented Minecraft server
+        supporting all of the vanilla features, then this project probably isn't for you. However,
+        if you'd like to experiment with something new, and want to find out more about how this
+        sort of thing even works, then you may have found the right place."
+  codeLanguage: 'java'
   code: |
-    @Plugin(id = "my-plugin")
-    public final class MyPlugin {
+      @Plugin(id = "my-plugin")
+      public final class MyPlugin {
 
-        private final Server server;
-        private final Logger logger;
+          private final Server server;
+          private final Logger logger;
 
-        @Inject
-        public MyPlugin(final Server server, final Logger logger) {
-            this.server = server;
-            this.logger = logger;
-        }
+          @Inject
+          public MyPlugin(final Server server, final Logger logger) {
+              this.server = server;
+              this.logger = logger;
+          }
 
-        @Listener
-        public void onStart(final ServerStartEvent event) {
-            logger.info("Hello from my plugin! Running on " + server.getPlatform().getName() + " version " +
-                server.getPlatform().getVersion());
-        }
-    }
-- title: "Where do I start?"
+          @Listener
+          public void onStart(final ServerStartEvent event) {
+              logger.info("Hello from my plugin! Running on " + server.getPlatform().getName() + " version " +
+                  server.getPlatform().getVersion());
+          }
+      }
+- title: 'Where do I start?'
   paragraphs:
-    - It depends on what you want to do. Everything should be comprehensibly documented on the wiki,
-      which is linked at the top of this page, and for any questions that aren't answered by the wiki,
-      the Discord is the place to go, which is also linked at the top of the page.
-    - Thank you for even considering using Krypton, support from people like you is what keeps this
-      project alive.
+      - It depends on what you want to do. Everything should be comprehensibly documented on the wiki,
+        which is linked at the top of this page, and for any questions that aren't answered by the wiki,
+        the Discord is the place to go, which is also linked at the top of the page.
+      - Thank you for even considering using Krypton, support from people like you is what keeps this
+        project alive.

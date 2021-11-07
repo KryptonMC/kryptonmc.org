@@ -1,108 +1,108 @@
 @import 'breakpoints';
 
 .generic-section {
-  width: 100%;
-  margin-top: 10%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row;
-  flex-wrap: wrap-reverse;
-  line-height: 1.5;
-
-  &:nth-child(even) {
-    flex-flow: row-reverse;
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row;
     flex-wrap: wrap-reverse;
-  }
+    line-height: 1.5;
 
-  &:nth-last-of-type(1) {
-    padding-bottom: 10%;
-  }
+    &:nth-child(even) {
+        flex-flow: row-reverse;
+        flex-wrap: wrap-reverse;
+    }
 
-  @media (max-width: $medium) {
-    text-align: center;
-    padding: 15px;
-    width: auto;
+    &:nth-last-of-type(1) {
+        padding-bottom: 10%;
+    }
 
-    > div:first-of-type {
-      width: 100%;
-
-      pre {
-        box-shadow: none;
+    @media (max-width: $medium) {
+        text-align: center;
+        padding: 15px;
         width: auto;
-        margin: 15px;
 
-        code {
-          padding: 15px;
-        }
-      }
+        > div:first-of-type {
+            width: 100%;
 
-      /* Causes the sections without code to also get hidden
+            pre {
+                box-shadow: none;
+                width: auto;
+                margin: 15px;
+
+                code {
+                    padding: 15px;
+                }
+            }
+
+            /* Causes the sections without code to also get hidden
             @media (max-width: $small) {
                 & {
                     display: none;
                 }
             }
             */
-    }
+        }
 
-    > div:last-of-type > div {
-      margin: auto;
-      width: calc(100% - 25px);
+        > div:last-of-type > div {
+            margin: auto;
+            width: calc(100% - 25px);
+        }
     }
-  }
-
-  > div {
-    height: fit-content;
-    margin-top: auto;
-    margin-bottom: auto;
 
     > div {
-      width: 600px;
+        height: fit-content;
+        margin-top: auto;
+        margin-bottom: auto;
 
-      > h3 {
-        font-size: xx-large;
-      }
+        > div {
+            width: 600px;
 
-      p {
-        font-size: large;
-        font-family: 'Merriweather Sans Light', sans-serif;
-      }
+            > h3 {
+                font-size: xx-large;
+            }
 
-      > p:last-of-type {
-        margin-bottom: 50px;
-      }
+            p {
+                font-size: large;
+                font-family: 'Merriweather Sans Light', sans-serif;
+            }
+
+            > p:last-of-type {
+                margin-bottom: 50px;
+            }
+        }
+
+        > pre {
+            margin-top: 65px;
+            box-shadow: 20px 20px 60px black;
+            transition-duration: 1s;
+            position: relative;
+
+            &:hover a {
+                opacity: 1;
+            }
+
+            a {
+                transition-duration: 0.5s;
+                opacity: 0;
+                font-size: 20px;
+                position: absolute;
+                padding: 10px;
+                top: 0;
+                right: 0;
+            }
+
+            > code {
+                padding: 35px;
+                border-radius: 5px;
+            }
+        }
     }
-
-    > pre {
-      margin-top: 65px;
-      box-shadow: 20px 20px 60px black;
-      transition-duration: 1s;
-      position: relative;
-
-      &:hover a {
-        opacity: 1;
-      }
-
-      a {
-        transition-duration: 0.5s;
-        opacity: 0;
-        font-size: 20px;
-        position: absolute;
-        padding: 10px;
-        top: 0;
-        right: 0;
-      }
-
-      > code {
-        padding: 35px;
-        border-radius: 5px;
-      }
-    }
-  }
 }
 
 @media (max-width: $small) {
-  .code-section {
-    display: none;
-  }
+    .code-section {
+        display: none;
+    }
 }

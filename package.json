@@ -1,41 +1,44 @@
 {
-  "name": "kryptonmc.org",
-  "version": "1.0.0",
-  "description": "The official Krypton website",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KryptonMC/kryptonmc.org.git"
-  },
-  "bugs": {
-    "url": "https://github.com/KryptonMC/kryptonmc.org/issues"
-  },
-  "homepage": "https://kryptonmc.org",
-  "private": true,
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
-    "filesize": "^8.0.0",
-    "fuse.js": "^6.4.6",
-    "gatsby": "^3.14.0",
-    "gatsby-plugin-advanced-sitemap": "^2.0.0",
-    "gatsby-plugin-mdx": "^2.12.0",
-    "gatsby-plugin-robots-txt": "^1.6.9",
-    "gatsby-plugin-sass": "^4.12.0",
-    "gatsby-source-filesystem": "^3.12.0",
-    "highlight.js": "^11.2.0",
-    "marked": "^3.0.2",
-    "react": "^17.0.1",
-    "react-code-blocks": "^0.0.9-0",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
-    "sass": "^1.38.0",
-    "timeago.js": "^4.0.2"
-  }
+    "name": "kryptonmc.org",
+    "version": "1.0.0",
+    "description": "The official Krypton website",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KryptonMC/kryptonmc.org.git"
+    },
+    "bugs": {
+        "url": "https://github.com/KryptonMC/kryptonmc.org/issues"
+    },
+    "homepage": "https://kryptonmc.org",
+    "private": true,
+    "scripts": {
+        "develop": "gatsby develop",
+        "start": "gatsby develop",
+        "build": "gatsby build",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean"
+    },
+    "dependencies": {
+        "@mdx-js/mdx": "^1.6.22",
+        "@mdx-js/react": "^1.6.22",
+        "filesize": "^8.0.0",
+        "fuse.js": "^6.4.6",
+        "gatsby": "^3.14.0",
+        "gatsby-plugin-advanced-sitemap": "^2.0.0",
+        "gatsby-plugin-mdx": "^2.12.0",
+        "gatsby-plugin-robots-txt": "^1.6.9",
+        "gatsby-plugin-sass": "^4.12.0",
+        "gatsby-source-filesystem": "^3.12.0",
+        "highlight.js": "^11.2.0",
+        "marked": "^3.0.2",
+        "react": "^17.0.1",
+        "react-code-blocks": "^0.0.9-0",
+        "react-dom": "^17.0.1",
+        "react-helmet": "^6.1.0",
+        "sass": "^1.38.0",
+        "timeago.js": "^4.0.2"
+    },
+    "devDependencies": {
+        "prettier": "2.4.1"
+    }
 }

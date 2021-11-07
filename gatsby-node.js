@@ -1,14 +1,13 @@
 exports.onCreateWebpackConfig = ({
-                                     stage,
-                                     rules,
-                                     loaders,
-                                     plugins,
-                                     actions,
-                                 }) => {
+    stage,
+    rules,
+    loaders,
+    plugins,
+    actions
+}) => {
     actions.setWebpackConfig({
         resolve: {
-            fallback: {
-            }
+            fallback: {}
         }
-    })
-}
+    });
+};
