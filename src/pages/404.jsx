@@ -13,6 +13,7 @@ export default class index extends Component {
                 <GeneralHeader />
                 <Helmet>
                     <title>404 Page not found | Krypton</title>
+                    <meta name='robots' content='noindex' />
                 </Helmet>
                 <div style={{display: "flex", flexFlow: "column", height: "100vh"}}>
                     <Navbar />
